@@ -1,0 +1,6 @@
+curl --header "Authorization: key=AAAA1qXdaow:APA91bE8JFVJeraY3Pd70UZEB1qXhSH3cGtaNk6okhGm2OvjvGyA83pNI6yKfg9C0GlyECy-Q6b9CM5JNSguJhyk7BzAiHaU7x-iLCiyaSFqyDByxAu13kI9C696OvF6_-JMjgRb5UYGHRu1r-GWjngzxCeAE3cmcA" --header Content-Type:"application/json" https://fcm.googleapis.com/fcm/send -d "{\"notification\": {\"title\": \"Portugal vs. Denmark\",    \"text\": \"5 to 1\"  },  \"to\" : \"dkMbX0gwFs0:APA91bGIFXUxdiEwkyjhuZhyREEmyx_LsTd3DW6AApqDxF2wWbqnyMGzgHIWhr5ra7WxDHDvw_HxO6oU2SfCdYXI7hhdq-N0v55BjyPh4-jU1zCJ6OXawZn_7HZzQw7jnhqCkDPmyEeS\"}"
+
+curl --header "Authorization: key=AAAA1qXdaow:APA91bE8JFVJeraY3Pd70UZEB1qXhSH3cGtaNk6okhGm2OvjvGyA83pNI6yKfg9C0GlyECy-Q6b9CM5JNSguJhyk7BzAiHaU7x-iLCiyaSFqyDByxAu13kI9C696OvF6_-JMjgRb5UYGHRu1r-GWjngzxCeAE3cmcA" --header Content-Type:"application/json" https://fcm.googleapis.com/fcm/send -d "{\"data\": {\"status\": \"Hahaha\" },  \"to\" : \"dkMbX0gwFs0:APA91bGIFXUxdiEwkyjhuZhyREEmyx_LsTd3DW6AApqDxF2wWbqnyMGzgHIWhr5ra7WxDHDvw_HxO6oU2SfCdYXI7hhdq-N0v55BjyPh4-jU1zCJ6OXawZn_7HZzQw7jnhqCkDPmyEeS\"}"
+
+
+

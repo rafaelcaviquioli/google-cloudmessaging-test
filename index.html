@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="manifest" href="/manifest.json">
+</head>
+<body>
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.6.3/firebase.js"></script>
+<script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyC7DCWjtu-b0J4qCg5cm09ySRJwKsAKqJo",
+        authDomain: "siganet-2ebe0.firebaseapp.com",
+        databaseURL: "https://siganet-2ebe0.firebaseio.com",
+        storageBucket: "siganet-2ebe0.appspot.com",
+        messagingSenderId: "921905752716"
+    };
+    firebase.initializeApp(config);
+
+    const messaging = firebase.messaging();
+    messaging.requestPermission()
+
+
+            .then(function () {
+                console.log('Notification permission granted.');
+                // TODO(developer): Retrieve an Instance ID token for use with FCM.
+                return messaging.getToken();
+            })
+            .then(function(token){
+                //Registra o token do dispositivo em um arquivo json
+                $.get( "registryUser.php?token=" + token);
+            })
+            .catch(function (err) {
+                console.log('Unable to get permission to notify.', err);
+            });
+
+    messaging.onMessage(function(playload){
+        console.log(playload);
+        const title = playload.data.message;
+        const options = {
+            body: playload.data.body
+        };
+
+        new Notification(title, options);
+
+    });
+
+</script>
+</body>
+</html>

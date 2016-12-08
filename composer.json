@@ -1,0 +1,12 @@
+{
+    "name": "root/notification-test",
+    "authors": [
+        {
+            "name": "rafaelcaviquioli",
+            "email": "rafael@pensador.com.br"
+        }
+    ],
+    "require": {
+        "sly/notification-pusher": "dev-master"
+    }
+}
